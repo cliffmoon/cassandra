@@ -203,6 +203,11 @@ public class Table
         }
         return tableInstance;
     }
+    
+    public static void close(String table) throws IOException
+    {
+      instances.remove(table);
+    }
         
     public Set<String> getColumnFamilies()
     {
